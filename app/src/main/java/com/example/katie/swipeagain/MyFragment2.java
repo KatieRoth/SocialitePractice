@@ -1,5 +1,6 @@
 package com.example.katie.swipeagain;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -41,9 +42,11 @@ public class MyFragment2 extends Fragment {
         ClickMe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(tv.getText().toString().contains("Hello")){
-                    tv.setText("Hi");
-                }else tv.setText("Hello");
+               // if(tv.getText().toString().contains("Hello")){
+                 //   tv.setText("Hi");
+                //}else tv.setText("Hello");
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
             }
         });
 
